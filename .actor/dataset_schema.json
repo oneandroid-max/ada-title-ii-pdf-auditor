@@ -1,0 +1,52 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "ADA Title II & PDF/UA-1 Audit Results",
+      "transformation": {
+        "fields": [
+          "filename",
+          "severity",
+          "passScore",
+          "pageCount",
+          "structTreeRoot",
+          "marked",
+          "lang",
+          "displayDocTitle",
+          "pdfUaXmp",
+          "scannedImagePages",
+          "missingAltFigures",
+          "tableCount",
+          "tableHeaderCount",
+          "formFieldCount",
+          "missingTooltips",
+          "remediationEstimateUsd",
+          "url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "filename": { "label": "Document", "format": "text" },
+          "severity": { "label": "Severity", "format": "text" },
+          "passScore": { "label": "Score (0-100)", "format": "number" },
+          "pageCount": { "label": "Pages", "format": "number" },
+          "structTreeRoot": { "label": "Tagged", "format": "boolean" },
+          "marked": { "label": "Marked", "format": "boolean" },
+          "lang": { "label": "Lang", "format": "text" },
+          "displayDocTitle": { "label": "Display Title", "format": "boolean" },
+          "pdfUaXmp": { "label": "PDF/UA XMP", "format": "boolean" },
+          "scannedImagePages": { "label": "Scanned Pgs", "format": "number" },
+          "missingAltFigures": { "label": "Missing Alt", "format": "number" },
+          "tableCount": { "label": "Tables", "format": "number" },
+          "tableHeaderCount": { "label": "TH Cells", "format": "number" },
+          "formFieldCount": { "label": "Form Fields", "format": "number" },
+          "missingTooltips": { "label": "Missing /TU", "format": "number" },
+          "remediationEstimateUsd": { "label": "Est. Fix ($)", "format": "number" },
+          "url": { "label": "PDF URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

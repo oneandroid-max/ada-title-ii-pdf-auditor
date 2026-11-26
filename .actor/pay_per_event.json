@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "eventName": "actor-start",
+      "eventTitle": "Actor run start",
+      "eventDescription": "Charged once when an ADA Title II & PDF/UA-1 audit run starts.",
+      "eventPriceUsd": 0.01
+    },
+    {
+      "eventName": "page-crawled",
+      "eventTitle": "HTML page crawled",
+      "eventDescription": "Charged per same-domain HTML page scanned for /DocumentCenter and .pdf links.",
+      "eventPriceUsd": 0.002
+    },
+    {
+      "eventName": "pdf-audited",
+      "eventTitle": "PDF document audited",
+      "eventDescription": "Charged per discovered PDF audited for ISO 14289-1 (PDF/UA-1) & WCAG 2.1 AA conformance.",
+      "eventPriceUsd": 0.02
+    }
+  ]
+}

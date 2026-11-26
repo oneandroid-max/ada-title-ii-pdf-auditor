@@ -1,0 +1,44 @@
+{
+  "title": "ADA Title II & PDF/UA-1 Public Document Auditor Input",
+  "description": "Provide one or more website URLs or direct PDF URLs to crawl and audit for ISO 14289-1 (PDF/UA-1) and WCAG 2.1 AA conformance.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "One or more website URLs (e.g. a city homepage, /DocumentCenter page, or board packet directory) or direct PDF URLs to audit.",
+      "editor": "stringList",
+      "prefill": [
+        "https://stillwaterok.gov/DocumentCenter/View/528/Americans-with-Disability-Act-Accessibility-Informational-Guide-PDF"
+      ]
+    },
+    "maxPages": {
+      "title": "Max HTML Pages to Crawl",
+      "type": "integer",
+      "description": "Maximum number of same-domain HTML pages to crawl while discovering public PDF links.",
+      "default": 25,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "maxPdfs": {
+      "title": "Max PDFs to Audit",
+      "type": "integer",
+      "description": "Maximum number of unique PDF documents to download and audit.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 500
+    },
+    "timeoutSecs": {
+      "title": "HTTP Timeout (Seconds)",
+      "type": "integer",
+      "description": "Per-request HTTP timeout in seconds when fetching web pages and PDF documents.",
+      "default": 15,
+      "minimum": 3,
+      "maximum": 120
+    }
+  },
+  "required": [
+    "startUrls"
+  ]
+}
