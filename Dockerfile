@@ -1,15 +1,18 @@
 FROM apify/actor-python:3.12
 
-WORKDIR /usr/src/app
+USER myuser
 
-COPY requirements.txt ./
-RUN python3 -m pip install --no-cache-dir --upgrade pip \
-    && python3 -m pip install --no-cache-dir -r requirements.txt
+COPY --chown=myuser:myuser requirements.txt ./
 
-COPY src ./src
+RUN echo "Python version:" \
+ && python --version \
+ && echo "Installing dependencies:" \
+ && pip install --no-cache-dir -r requirements.txt \
+ && echo "Installed packages:" \
+ && pip freeze
 
-RUN useradd --create-home apify \
-    && chown -R apify:apify /usr/src/app
-USER apify
+COPY --chown=myuser:myuser . ./
 
-CMD ["python3", "-m", "src.main"]
+RUN python -m compileall -q src/
+
+CMD ["python", "-m", "src.main"]
