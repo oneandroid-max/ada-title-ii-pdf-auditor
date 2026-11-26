@@ -1,0 +1,19 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "ADA Title II & PDF/UA-1 Public Document Auditor: output",
+  "description": "Every audited PDF record is saved in the default dataset, and an aggregate compliance summary is saved to the default key-value store under SUMMARY.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "PDF Audit Results",
+      "description": "ISO 14289-1 (PDF/UA-1) and WCAG 2.1 AA audit record for every discovered PDF.",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Executive Compliance Summary",
+      "description": "Aggregate pass rate, severity counts, and fixed-fee remediation estimate across all audited PDFs.",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}

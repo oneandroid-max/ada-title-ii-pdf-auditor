@@ -4,10 +4,16 @@
   "title": "ADA Title II & PDF/UA-1 Public Document Auditor",
   "description": "Crawls municipal, university, transit, and public websites (including /DocumentCenter & .pdf endpoints) and audits every discovered PDF against ISO 14289-1 (PDF/UA-1) and WCAG 2.1 AA with pass scores, severity ratings, and fixed-fee remediation estimates.",
   "version": "1.0",
+  "buildTag": "latest",
+  "defaultMemoryMbytes": 512,
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 2048,
   "meta": {
     "templateId": "python-empty"
   },
+  "readme": "../README.md",
   "input": "./input_schema.json",
+  "output": "./output_schema.json",
   "dockerfile": "../Dockerfile",
   "storages": {
     "dataset": "./dataset_schema.json"
